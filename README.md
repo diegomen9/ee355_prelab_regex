@@ -111,6 +111,31 @@ uniq -c: counts occurrences
 awk '{print $2, $1}': reorders output to word count
 
 
+tr '[:upper:]' '[:lower:]' < words.txt
+Converts all uppercase letters to lowercase using character classes.
+Explained on page 151 under "Character Class Keywords".
+
+tr -s ' ' '\n'
+Translates spaces into newlines and squeezes repeated spaces. This helps tokenize the text word by word.
+Found on page 134 in the "Manipulating data" section.
+
+grep -v -w -E 'the|a|an|is'
+Filters out (with -v) the exact words the, a, an, and is using extended regex.
+Detailed on page 38 in the "The grep Command" section.
+
+sort
+Sorts the words alphabetically in preparation for counting duplicates.
+Discussed on page 39 in "The sort Command" section.
+
+uniq -c
+Removes duplicate adjacent words and counts how many times each appears.
+Listed under "Manipulating data" on page 134.
+
+awk '{print $2, $1}'
+Swaps the count and word fields to output "word count" instead of "count word".
+Mentioned on page 133 under "Programming Utilities".
+
+
 
 Expected Output (output_p2.txt):
 
